@@ -11,7 +11,7 @@ app.set('domain', process.env.VCAP_APP_HOST || 'localhost');
 app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'ejs');
 app.use(express.cookieParser());
-app.use(express.session({secret: "souravmondalcnsessionsecretkey1234"}));
+app.use(express.session({secret: "souravmondalcnsessionsecretkey"}));
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
