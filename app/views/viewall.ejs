@@ -1,0 +1,24 @@
+<% include header.ejs %>
+<body>
+    <h1>
+        <font color='red'><%
+        if (typeof(msg) !== 'undefined'){ %>
+        <%= msg %>
+        <%}
+        %></font>
+    </h1>
+    <% if (typeof(allusers) !== 'undefined' && allusers.length!=0){ 
+    allusers.forEach(function(element){ %>
+    <div class="img-thumbnail">
+        <b>Username:</b> <%= element.username %><br/>
+        <b>Name:</b> <%= element.goodname %><br/>
+        <b>Email:</b> <%= element.useremail %><br/>
+        <a href="/deleteuser/<%= element.username %>" class="btn btn-danger btn-xs">Delete <%= element.username %></a>
+    </div>
+    <% });
+    }else{
+    %>
+    <h2>No user found<h2>
+            <%
+            } %>
+            <% include footer.ejs %>

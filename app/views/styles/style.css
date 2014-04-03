@@ -1,0 +1,20 @@
+.clear{
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+header h1,footer h3{
+    color: #ffffff;
+    text-align: center;
+    text-transform: capitalize !important;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+#content{
+    overflow-y: scroll;
+    border: 1px solid #808080;
+    box-shadow: 6px 7px 5px #808080;
+    height: 300px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+}

@@ -1,0 +1,20 @@
+<% include header.ejs %>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Register New Users</h3>
+    </div>
+    <div class="panel-body">
+        <% if (typeof(msg) !== 'undefined'){ %>
+        <p class="alert alert-danger"><%= msg %></p>
+        <% } %>
+        <form action="/registerprocess" method="post">
+            <input type="text" name="username" id="username" required placeholder="username" class="form-control"/><br/>
+            <input type="text" name="goodname" id="goodname" required placeholder="your good name" class="form-control"/><br/>
+            <input type="password" name="userpass" id="userpass" required placeholder="password" class="form-control"/><br/>
+            <input type="email" name="useremail" id="useremail" required placeholder="user email" class="form-control" /><br/>
+            <input type="submit" name="register" value="register" class="btn btn-sm btn-primary"/>
+        </form>
+    </div>
+</div>
+already a user?<a href="/">Login<a/>
+    <% include footer.ejs %>

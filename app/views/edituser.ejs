@@ -1,0 +1,17 @@
+<% include header.ejs %>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">User Profile Edit</h3>
+    </div>
+    <div class="panel-body">
+        <form method="post" action="/updateuserdata">
+            <label>Username: </label><%= userdata.username %><br/>
+            <input type="hidden" name="username" value="<%= userdata.username %>" class="form-control"/>
+            <label>Good Name: </label><input type="text" name="goodname" value="<%= userdata.goodname %>" required class="form-control"/><br/>
+            <label>Password: </label><input type="password" name="userpass" value="" class="form-control" placeholder="fill only if you want to change the password"/><br/>
+            <label>Email </label><input type="email" name="useremail" value="<%= userdata.useremail %>" required class="form-control"/><br/>
+            <input type="submit" value="update" name="update" class="btn btn-sm btn-primary"/>
+        </form>
+    </div>
+</div>
+<% include footer.ejs %>

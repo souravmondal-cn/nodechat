@@ -1,0 +1,24 @@
+<% include header.ejs %>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">User Login</h3>
+    </div>
+    <div class="panel-body">
+        <%
+        if (typeof(msg) !== 'undefined'){ %>
+        <p class="alert alert-danger"><%= msg %></p>
+        <%}
+        %>
+        <form action="/loginprocess" method="post">
+            <input type="text" name="username" id="username" placeholder="username" required class="form-control"/><br/>
+            <input type="password" name="userpass" id="userpass" placeholder="password" required class="form-control"/><br/>
+            <input type="submit" name="login" value="login" class="btn btn-sm btn-success" />
+        </form>
+        <a href="#" class="btn btn-primary btn-sm">Login With Facebook</a>
+        <a href="#" class="btn btn-info btn-sm">Login With Twitter</a>
+        <a href="#" class="btn btn-danger btn-sm">Login With Google+</a>
+        <a href="/register" class="btn btn-sm btn-default">New User Registration</a>
+        <a href="/allusers" target="_blank" class="btn btn-sm btn-default">View All Users</a>
+    </div>
+</div>
+<% include footer.ejs %>
